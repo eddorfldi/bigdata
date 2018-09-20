@@ -58,7 +58,7 @@ contoh ' ; ',' $ ', etc<br>
 Ada fungsi membuat array list, mengubah, menambahkan bahkan mengedit array list itu sendiri. <br>
 
 ## 4.1. if Statements
-`x = int(input("please enter an integer: "))`<br>
+>`x = int(input("please enter an integer: "))`<br>
 `please enter an integer: 28`<br>
 `if x<0:`<br>
 `     x=0`<br>
@@ -73,7 +73,7 @@ Ada fungsi membuat array list, mengubah, menambahkan bahkan mengedit array list 
 Untuk if statements, hampir sama diseluruh bahasa pemograman. if true maka melakukan yang true jika false, maka ia melakukan perintah false.<br>
 
 ## 4.2 for statements
-` words = ['cat','window','defenestrate']`<br>
+>` words = ['cat','window','defenestrate']`<br>
 ` for w in words:`<br>
 `     print(w, len(w))`<br>
 `...`<br>
@@ -83,7 +83,7 @@ Untuk if statements, hampir sama diseluruh bahasa pemograman. if true maka melak
 Sama seperti if, for statements juga sama dengan bahasa pemograman yang lain. Perulangan data yang sudah di inputkan.<br>
 
 ## 4.3 range()
-` a = ['mary','had','a','little','lamb']`<br>
+>` a = ['mary','had','a','little','lamb']`<br>
 ` for i in range(len(a)):`<br>
 `     print(i,a[i])`<br>
 `...`<br>
@@ -95,7 +95,7 @@ Sama seperti if, for statements juga sama dengan bahasa pemograman yang lain. Pe
 Ini operan menghitung berapa jarak dari angka pertama dan kedua, contoh range(5,10) maka 5,6,7,8,9<br>
 
 ## 4.4. break and continue Statements, and else Clauses on Loops
-` for n in range(2,10):`<br>
+>` for n in range(2,10):`<br>
 `     for x in range(2,n):`<br>
 `             if n % x == 0:`<br>
 `                     print(n, 'equals', x, ' * ', n//x)`<br>
@@ -121,13 +121,13 @@ operasi break and continue bertujuan untuk jika ternyata for yang digunakan tepa
 kalau ingin melanjutkan berarti countinue <br>
 
 ## 4.5 pass Statements
-`def initlog(*args):`<br>
+>`def initlog(*args):`<br>
 `      pass`<br>
 `...`<br>
 Ini bertujuan statement itu tidak melakukan apapun. jika dia dipanggil maka maka langsung pass.<br>
 
 ## 4.6 Defining Functions
-` def fib(n):`<br>
+>` def fib(n):`<br>
 `     a, b = 0, 1`<br>
 `     while a < n:`<br>
 `             print(a,end='  ')`<br>
