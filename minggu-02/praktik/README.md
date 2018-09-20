@@ -80,6 +80,7 @@ Untuk if statements, hampir sama diseluruh bahasa pemograman. if true maka melak
 `cat 3`<br>
 `window 6`<br>
 `defenestrate 12`<br>
+
 Sama seperti if, for statements juga sama dengan bahasa pemograman yang lain. Perulangan data yang sudah di inputkan.<br>
 
 ## 4.3 range()
@@ -92,6 +93,7 @@ Sama seperti if, for statements juga sama dengan bahasa pemograman yang lain. Pe
 `2 a`<br>
 `3 little`<br>
 `4 lamb`<br>
+
 Ini operan menghitung berapa jarak dari angka pertama dan kedua, contoh range(5,10) maka 5,6,7,8,9<br>
 
 ## 4.4. break and continue Statements, and else Clauses on Loops
@@ -117,6 +119,7 @@ Ini operan menghitung berapa jarak dari angka pertama dan kedua, contoh range(5,
 `8 equals 2  *  4`<br>
 `9  is a prime number`<br>
 `9 equals 3  *  3`<br>
+
 operasi break and continue bertujuan untuk jika ternyata for yang digunakan tepat maka ia akan berhenti, penggunaan break <br>
 kalau ingin melanjutkan berarti countinue <br>
 
@@ -124,6 +127,7 @@ kalau ingin melanjutkan berarti countinue <br>
 >`def initlog(*args):`<br>
 `      pass`<br>
 `...`<br>
+
 Ini bertujuan statement itu tidak melakukan apapun. jika dia dipanggil maka maka langsung pass.<br>
 
 ## 4.6 Defining Functions
@@ -136,4 +140,5 @@ Ini bertujuan statement itu tidak melakukan apapun. jika dia dipanggil maka maka
 ` ...`<br>
 ` fib(2000)`<br>
 ` 0  1  1  2  3  5  8  13  21  34  55  89  144  233  377  610  987  1597`<br>
+
 Mendefinisikan fungsi yang dipanggil seperti private ataupun public di JAVA.<br>
