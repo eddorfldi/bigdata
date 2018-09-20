@@ -57,22 +57,83 @@ Kali ini, cara membuat list pada Python, hampir sama pada umumnya tapi ciri khas
 contoh ' ; ',' $ ', etc<br>
 Ada fungsi membuat array list, mengubah, menambahkan bahkan mengedit array list itu sendiri. <br>
 
-
 ## 4.1. if Statements
+`x = int(input("please enter an integer: "))`<br>
+`please enter an integer: 28`<br>
+`if x<0:`<br>
+`     x=0`<br>
+`     print('negative change to zero')`<br>
+` elif x == 1:`<br>
+`     print('single')`<br>
+` else:`<br>
+`     print('more')`<br>
+`...`<br>
+`more`<br>
+
 Untuk if statements, hampir sama diseluruh bahasa pemograman. if true maka melakukan yang true jika false, maka ia melakukan perintah false.<br>
 
 ## 4.2 for statements
-Sama seperti if, for statements juga sama dengan bahasa pemograman yang lain. Perulangan data yang sudah di inputkan.
+` words = ['cat','window','defenestrate']`<br>
+` for w in words:`<br>
+`     print(w, len(w))`<br>
+`...`<br>
+`cat 3`<br>
+`window 6`<br>
+`defenestrate 12`<br>
+Sama seperti if, for statements juga sama dengan bahasa pemograman yang lain. Perulangan data yang sudah di inputkan.<br>
 
 ## 4.3 range()
-Ini operan menghitung berapa jarak dari angka pertama dan kedua, contoh range(5,10) maka 5,6,7,8,9
+` a = ['mary','had','a','little','lamb']`<br>
+` for i in range(len(a)):`<br>
+`     print(i,a[i])`<br>
+`...`<br>
+`0 mary`<br>
+`1 had`<br>
+`2 a`<br>
+`3 little`<br>
+`4 lamb`<br>
+Ini operan menghitung berapa jarak dari angka pertama dan kedua, contoh range(5,10) maka 5,6,7,8,9<br>
 
 ## 4.4. break and continue Statements, and else Clauses on Loops
+` for n in range(2,10):`<br>
+`     for x in range(2,n):`<br>
+`             if n % x == 0:`<br>
+`                     print(n, 'equals', x, ' * ', n//x)`<br>
+`                     break`<br>
+`             else:`<br>
+`                     print(n, ' is a prime number')`<br>
+`...`<br>
+`3  is a prime number`<br>
+`4 equals 2  *  2`<br>
+`5  is a prime number`<br>
+`5  is a prime number`<br>
+`5  is a prime number`<br>
+`6 equals 2  *  3`<br>
+`7  is a prime number`<br>
+`7  is a prime number`<br>
+`7  is a prime number`<br>
+`7  is a prime number`<br>
+`7  is a prime number`<br>
+`8 equals 2  *  4`<br>
+`9  is a prime number`<br>
+`9 equals 3  *  3`<br>
 operasi break and continue bertujuan untuk jika ternyata for yang digunakan tepat maka ia akan berhenti, penggunaan break <br>
 kalau ingin melanjutkan berarti countinue <br>
 
 ## 4.5 pass Statements
-Ini bertujuan statement itu tidak melakukan apapun. jika dia dipanggil maka maka langsung pass.
+`def initlog(*args):`<br>
+`      pass`<br>
+`...`<br>
+Ini bertujuan statement itu tidak melakukan apapun. jika dia dipanggil maka maka langsung pass.<br>
 
 ## 4.6 Defining Functions
-Mendefinisikan fungsi yang dipanggil seperti private ataupun public di JAVA.
+` def fib(n):`<br>
+`     a, b = 0, 1`<br>
+`     while a < n:`<br>
+`             print(a,end='  ')`<br>
+`             a, b = b, a+b`<br>
+`     print()`<br>
+` ...`<br>
+` fib(2000)`<br>
+` 0  1  1  2  3  5  8  13  21  34  55  89  144  233  377  610  987  1597`<br>
+Mendefinisikan fungsi yang dipanggil seperti private ataupun public di JAVA.<br>
