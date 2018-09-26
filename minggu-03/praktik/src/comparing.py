@@ -1,4 +1,4 @@
-# Contoh comparing adalah contoh mengcompare dua variable
+# Contoh comparing adalah contoh mengcompare dua variable atau lebih
 
 >>> (1,2,3) < (1,2,4)
 True
