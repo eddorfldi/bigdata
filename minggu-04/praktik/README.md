@@ -173,7 +173,7 @@ fungsi diatas merupakan untuk mengimport sebuah fungsi matematika. <br>
 
 Di ini adalah TypeError exception dari Python.<br>
 
-#8.3 Handling Exceptions
+# 8.3 Handling Exceptions
 > ` def this_fails():`<br>
 `     x = 1/0`<br>
 `....`<br>
@@ -186,7 +186,7 @@ Di ini adalah TypeError exception dari Python.<br>
 
 Diatas merupakan cara untuk mengatasi error. <br>
 
-#8.4 Raising Exceptions
+# 8.4 Raising Exceptions
 > ` try:`<br>
 `     raise NameError('HiThere')`<br>
 ` except NameError:`<br>
@@ -200,7 +200,7 @@ Diatas merupakan cara untuk mengatasi error. <br>
 
 Ini merupakan menunjukan tempat dan nama peringatan dari error tersebut. <br>
 
-#8.6 Defining Clean-up Actions
+# 8.6 Defining Clean-up Actions
 > ` try : `<br>
 `     raise KeyboardInterrupt`<br>
 ` finally:`<br>
@@ -213,7 +213,7 @@ Ini merupakan menunjukan tempat dan nama peringatan dari error tersebut. <br>
 
 Fungsi ini adalah ketika penggunaan yang salah dari keyboard. <br>
 
-#9.2.1 Scopes and Namespaces Example
+# 9.2.1 Scopes and Namespaces Example
 > ` def scope_test():`<br>
 `     def do_local():`<br>
 `             spam = "local spam"`<br>
@@ -238,7 +238,7 @@ Fungsi ini adalah ketika penggunaan yang salah dari keyboard. <br>
 ` print("In global scope:" ,spam)`<br>
 `In global scope: global spam`<br>
 
-#9.3.2. Class Objects
+# 9.3.2. Class Objects
 > ` class Complex:`<br>
 `     def __init__(self, realpart, imagpart):`<br>
 `             self.r = realpart`<br>
@@ -248,7 +248,7 @@ Fungsi ini adalah ketika penggunaan yang salah dari keyboard. <br>
 ` x.r,x.i`<br>
 `(3.0, -4.5)`<br>
 
-#9.3.3 Instance Objects
+# 9.3.3 Instance Objects
 > `  x.counter = 1`<br>
 `  while x.counter < 10:`<br>
 `      x.counter = x.counter * 2`<br>
@@ -257,7 +257,7 @@ Fungsi ini adalah ketika penggunaan yang salah dari keyboard. <br>
 ` 16`<br>
 `  del x.counter`<br>
 
-#9.3.5 Class and Instance Variables
+# 9.3.5 Class and Instance Variables
 >` class Dog:`<br>
 `     def __init__(self,name):`<br>
 `             self.name = name`<br>
