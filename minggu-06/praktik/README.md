@@ -109,3 +109,4 @@ Executing transaction: done
 (base) C:\Users\Gucci Genk>conda activate airflow
 
 (airflow) C:\Users\Gucci Genk>conda deactivate
+
