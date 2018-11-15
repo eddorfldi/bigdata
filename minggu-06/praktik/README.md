@@ -43,3 +43,69 @@
 
 
 # Cara Menginstall Airflow (versi Windows)
+conda create -n airflow pip setuptools python=3.6
+WARNING: A space was detected in your requested environment path
+'C:\Users\Gucci Genk\Anaconda3\envs\airflow'
+Spaces in paths can sometimes be problematic.
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: C:\Users\Gucci Genk\Anaconda3\envs\airflow
+
+  added / updated specs:
+    - pip
+    - python=3.6
+    - setuptools
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    wincertstore-0.2           |   py36h7fe50ca_0          13 KB
+    python-3.6.7               |       h33f27b4_1        20.9 MB
+    pip-18.1                   |           py36_0         1.8 MB
+    wheel-0.32.2               |           py36_0          52 KB
+    certifi-2018.10.15         |           py36_0         138 KB
+    setuptools-40.5.0          |           py36_0         620 KB
+    ------------------------------------------------------------
+                                           Total:        23.5 MB
+
+The following NEW packages will be INSTALLED:
+
+    certifi:        2018.10.15-py36_0
+    pip:            18.1-py36_0
+    python:         3.6.7-h33f27b4_1
+    setuptools:     40.5.0-py36_0
+    vc:             14.1-h0510ff6_4
+    vs2015_runtime: 14.15.26706-h3a45250_0
+    wheel:          0.32.2-py36_0
+    wincertstore:   0.2-py36h7fe50ca_0
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+wincertstore-0.2     | 13 KB     | ############################################################################################################################ | 100%
+python-3.6.7         | 20.9 MB   | ############################################################################################################################ | 100%
+pip-18.1             | 1.8 MB    | ############################################################################################################################ | 100%
+wheel-0.32.2         | 52 KB     | ############################################################################################################################ | 100%
+certifi-2018.10.15   | 138 KB    | ############################################################################################################################ | 100%
+setuptools-40.5.0    | 620 KB    | ############################################################################################################################ | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate airflow
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+
+(base) C:\Users\Gucci Genk>conda activate airflow
+
+(airflow) C:\Users\Gucci Genk>conda deactivate
