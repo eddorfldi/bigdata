@@ -220,5 +220,95 @@ d  NaN  NaN  4.0
 7       NaN       NaN       NaN NaN
 8       NaN       NaN       NaN NaN
 9       NaN       NaN       NaN NaN
+>>> type(df['A'])
+<class 'pandas.core.series.Series'>
+>>> df - df['A']
+            2000-01-01 00:00:00  2000-01-02 00:00:00  2000-01-03 00:00:00  2000-01-04 00:00:00 ...  2000-01-08 00:00:00   A   B   C
+2000-01-01                  NaN                  NaN                  NaN                  NaN ...                  NaN NaN NaN NaN
+2000-01-02                  NaN                  NaN                  NaN                  NaN ...                  NaN NaN NaN NaN
+2000-01-03                  NaN                  NaN                  NaN                  NaN ...                  NaN NaN NaN NaN
+2000-01-04                  NaN                  NaN                  NaN                  NaN ...                  NaN NaN NaN NaN
+2000-01-05                  NaN                  NaN                  NaN                  NaN ...                  NaN NaN NaN NaN
+2000-01-06                  NaN                  NaN                  NaN                  NaN ...                  NaN NaN NaN NaN
+2000-01-07                  NaN                  NaN                  NaN                  NaN ...                  NaN NaN NaN NaN
+2000-01-08                  NaN                  NaN                  NaN                  NaN ...                  NaN NaN NaN NaN
 
+[8 rows x 11 columns]
 
+# Transposing
+>>> df[:5].T
+   2000-01-01  2000-01-02  2000-01-03  2000-01-04  2000-01-05
+A   -1.527096    1.069324   -0.552742    1.568252   -0.611872
+B    0.744563    0.706189   -0.557935    0.713562   -0.628124
+C   -0.512684   -2.445008   -0.620193   -1.590126   -0.372767
+
+# DataFrame interoperability with NumPy functions
+>>> np.exp(df)
+                   A         B         C
+2000-01-01  0.217165  2.105522  0.598886
+2000-01-02  2.913410  2.026255  0.086725
+2000-01-03  0.575370  0.572390  0.537841
+2000-01-04  4.798255  2.041249  0.203900
+2000-01-05  0.542335  0.533592  0.688826
+2000-01-06  1.037482  3.084910  3.616295
+2000-01-07  0.384891  4.552109  1.252450
+2000-01-08  4.619176  1.323539  0.298348
+>>> np.asarray(df)
+array([[-1.52709585,  0.74456337, -0.51268371],
+       [ 1.06932436,  0.70618938, -2.44500784],
+       [-0.55274247, -0.55793459, -0.62019263],
+       [ 1.56825225,  0.71356177, -1.590126  ],
+       [-0.61187165, -0.62812362, -0.37276703],
+       [ 0.0367969 ,  1.12652255,  1.28544993],
+       [-0.95479491,  1.51559057,  0.22510201],
+       [ 1.53021623,  0.28030939, -1.20949524]])
+       
+# Console display
+>>> pd.set_option('display.width', 40)
+>>> pd.DataFrame(np.random.randn(3, 12))
+         0         1         2         3         4         5         6         7         8         9         10        11
+0  0.941595 -0.281574  0.402722  1.052652  1.577692  1.770626 -1.788340 -0.951465  1.099783  1.394173  0.742940  0.418658
+1  0.261975 -0.737266  0.232209  2.055588  1.678714 -1.293341  0.379221  0.139958  0.355462  0.894095  0.503120  0.945206
+2  1.178554 -0.125867 -1.683584 -0.068520 -2.509512 -0.664375  0.577029  0.634695 -0.596757  1.026476 -0.764995 -0.037509
+
+# DataFrame column attribute access and IPython completion
+>>> df = pd.DataFrame({'foo1' : np.random.randn(5),
+...     'foo2' : np.random.randn(5)})
+>>> df
+       foo1      foo2
+0 -0.085709  0.567698
+1  1.428085  0.082535
+2 -0.439620  0.822733
+3  0.010360  0.362885
+4  1.686646  0.529790
+>>>
+>>> df.foo1
+0   -0.085709
+1    1.428085
+2   -0.439620
+3    0.010360
+4    1.686646
+Name: foo1, dtype: float64
+
+# From 3D ndarray with optional axis labels
+>>> wp = pd.Panel(np.random.randn(2, 5, 4), items=['Item1', 'Item2'],
+...     major_axis=pd.date_range('1/1/2000', periods=5),
+...     minor_axis=['A', 'B', 'C', 'D'])
+>>> wp
+<class 'pandas.core.panel.Panel'>
+Dimensions: 2 (items) x 5 (major_axis) x 4 (minor_axis)
+Items axis: Item1 to Item2
+Major_axis axis: 2000-01-01 00:00:00 to 2000-01-05 00:00:00
+Minor_axis axis: A to D
+
+# From dict of DataFrame objects
+>>> data = {'Item1' : pd.DataFrame(np.random.randn(4, 3)),
+...     'Item2' : pd.DataFrame(np.random.randn(4, 2))}
+>>> pd.Panel(data)
+<class 'pandas.core.panel.Panel'>
+Dimensions: 2 (items) x 4 (major_axis) x 3 (minor_axis)
+Items axis: Item1 to Item2
+Major_axis axis: 0 to 3
+Minor_axis axis: 0 to 2
+
+# From DataFrame using to_panel method
