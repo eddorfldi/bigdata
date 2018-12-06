@@ -1,0 +1,5 @@
+- bab 4 hal 115 : pd.read-csv => untuk membaca file CSV dan menepatkan hasilnya di variable tertentu.
+- bab 4 hal 115 : .iloc => membuat select berdasarkan lokasi interger.
+- bab 4 hal 116 : .loc => membuat select dengan label indexnya.
+- bab 4 hal 116 : np.random.seed =? untuk menyeleksi several disjoint label.
+- bab 4 hal 125 : .get.loc => menentukan posisi integer dari kolom kolom tersedia.
